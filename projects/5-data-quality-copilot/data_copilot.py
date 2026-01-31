@@ -62,7 +62,7 @@ def analyze_completeness(df):
     for col in df.columns:
         missing = df[col].isnull().sum()
         if missing > 0:
-            missing_pct = (missing / len(df)) * 100
+            missing_pct = (missing / len(df)) * 100 if len(df) > 0 else 0
             column_missing[col] = {
                 'count': missing,
                 'percentage': round(missing_pct, 2)
