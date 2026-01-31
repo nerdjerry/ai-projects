@@ -199,7 +199,13 @@ def main():
         
         # AI content review
         print("\n🔍 Running safety check...")
-        is_safe, issues = review_post(post)
+        try:
+            is_safe, issues = review_post(post)
+        except Exception as e:
+            print(f"\n❌ Error during safety check: {e}")
+            # Treat as unable to verify safety
+            is_safe = False
+            issues = ["Unable to verify safety due to an internal error."]
         
         if not is_safe:
             print("\n⚠️  SAFETY CONCERNS DETECTED:")
