@@ -360,7 +360,11 @@ def main():
     
     # Get AI recommendations
     print("\n💭 Getting AI recommendations...")
-    recommendations = get_ai_recommendations(report)
+    try:
+        recommendations = get_ai_recommendations(report)
+    except Exception as e:
+        print(f"⚠️ Failed to get AI recommendations: {e}")
+        recommendations = "AI recommendations are unavailable due to an error while contacting the AI service."
     
     print("\n" + "="*60)
     print("AI RECOMMENDATIONS")
