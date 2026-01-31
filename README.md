@@ -137,7 +137,7 @@ project-name/
 ├── README.md           # Detailed project documentation
 ├── main_app.py         # Main application code (well-commented)
 ├── requirements.txt    # Python dependencies
-├── .env.example        # Example environment variables (if applicable)
+├── .env.example        # Example environment variables
 └── data/              # Sample data or documents (if applicable)
 ```
 
