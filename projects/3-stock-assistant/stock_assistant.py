@@ -253,7 +253,14 @@ def main():
         
         # Get AI explanation
         print("\n💭 Analyzing...")
-        explanation = explain_with_ai(stock_data, question)
+        try:
+            explanation = explain_with_ai(stock_data, question)
+        except Exception as e:
+            print("\n❌ There was a problem getting an AI explanation.")
+            print("This might be due to a network issue, rate limit, or API key problem.")
+            print(f"Technical details: {e}")
+            print("\nYou can try your question again in a moment, or check your setup.")
+            continue
         
         # Display results
         print("\n" + "="*60)
