@@ -135,7 +135,7 @@ Each project follows this structure:
 ```
 project-name/
 ├── README.md           # Detailed project documentation
-├── main_app.py         # Main application code (well-commented)
+├── <project_main>.py   # Main Python file (descriptively named, e.g., rag_app.py)
 ├── requirements.txt    # Python dependencies
 ├── .env.example        # Example environment variables
 └── data/              # Sample data or documents (if applicable)
