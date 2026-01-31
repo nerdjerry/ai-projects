@@ -12,7 +12,6 @@ Key Features:
 """
 
 import os
-import csv
 from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
