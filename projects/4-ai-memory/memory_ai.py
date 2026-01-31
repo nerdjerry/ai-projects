@@ -39,7 +39,7 @@ def load_conversation_history():
         try:
             with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
                 return json.load(f)
-        except:
+        except (json.JSONDecodeError, IOError):
             return []
     return []
 
