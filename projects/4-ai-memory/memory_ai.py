@@ -13,7 +13,6 @@ Key Features:
 
 import os
 import json
-from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
