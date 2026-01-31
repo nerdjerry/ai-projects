@@ -150,7 +150,7 @@ def analyze_outliers(df):
         if num_outliers > 0:
             outliers[col] = {
                 'count': num_outliers,
-                'percentage': round((num_outliers / len(df)) * 100, 2),
+                'percentage': round((num_outliers / len(df)) * 100, 2) if len(df) > 0 else 0,
                 'range': f"{lower_bound:.2f} to {upper_bound:.2f}"
             }
     
