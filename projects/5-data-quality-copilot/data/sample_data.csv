@@ -1,0 +1,21 @@
+name,email,age,salary,department,join_date
+John Doe,john@example.com,32,75000,Engineering,2020-01-15
+Jane Smith,jane.smith@example.com,28,65000,Marketing,2021-03-20
+Bob Johnson,bob@example,45,95000,Engineering,2019-06-10
+Alice Williams,alice@example.com,,82000,Sales,2020-11-05
+Charlie Brown,charlie@example.com,35,70000,Engineering,2021-01-12
+John Doe,john@example.com,32,75000,Engineering,2020-01-15
+Diana Prince,diana.prince@example.com,29,68000,Marketing,2021-05-18
+Eve Davis,eve@example.com,150,90000,Sales,2019-09-25
+Frank Miller,,38,85000,Engineering,2020-07-30
+Grace Lee,grace@example.com,31,72000,Marketing,2021-02-14
+Henry Wilson,henry@example.com,42,105000,Engineering,2018-12-01
+Ivy Chen,ivy.chen@example.com,27,63000,Sales,2022-01-10
+Jack Robinson,jack.robinson,33,78000,Engineering,2020-04-22
+Kelly Martinez,kelly@example.com,29,,Marketing,2021-08-15
+Leo Thompson,leo@example.com,36,88000,Sales,2019-11-30
+Mary Johnson,mary@example.com,31,71000,Engineering,2020-09-05
+Nancy White,nancy.white@example.com,28,67000,Marketing,2021-06-20
+Oscar Green,oscar@example.com,44,98000,Engineering,2019-03-15
+Paul Harris,,35,81000,Sales,2020-10-12
+Quinn Adams,quinn@example.com,30,73000,Marketing,2021-04-08

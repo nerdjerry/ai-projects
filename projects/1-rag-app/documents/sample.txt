@@ -1,0 +1,25 @@
+Sample Document for RAG App
+
+This is a sample document to help you get started with the RAG app.
+
+What is Artificial Intelligence?
+Artificial Intelligence (AI) refers to computer systems that can perform tasks that typically require human intelligence. These tasks include learning, reasoning, problem-solving, perception, and language understanding.
+
+Machine Learning
+Machine Learning is a subset of AI that enables computers to learn from data without being explicitly programmed. Instead of following predetermined rules, machine learning algorithms identify patterns in data and make decisions based on those patterns.
+
+Types of Machine Learning:
+1. Supervised Learning: The algorithm learns from labeled data
+2. Unsupervised Learning: The algorithm finds patterns in unlabeled data
+3. Reinforcement Learning: The algorithm learns through trial and error
+
+Applications of AI
+AI is used in many areas including:
+- Healthcare: Diagnosing diseases and recommending treatments
+- Finance: Detecting fraud and algorithmic trading
+- Transportation: Self-driving cars and route optimization
+- Entertainment: Recommendation systems for movies and music
+- Customer Service: Chatbots and virtual assistants
+
+The Future of AI
+As AI technology continues to advance, it's becoming more integrated into our daily lives. From smartphones to smart homes, AI is making technology more intuitive and helpful.
