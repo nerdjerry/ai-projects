@@ -53,7 +53,7 @@ The copilot will analyze your data and provide:
 - `data_copilot.py`: Main application code
 - `requirements.txt`: Python dependencies
 - `data/`: Place your CSV files here
-- `sample_data.csv`: Example dataset
+- `data/sample_data.csv`: Example dataset
 - `.env`: Your API key (create this yourself)
 
 ## Data Quality Checks
