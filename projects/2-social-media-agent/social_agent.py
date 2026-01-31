@@ -186,63 +186,69 @@ def main():
         try:
             post = generate_social_post(topic, style)
         except Exception as e:
-            print(f"\n❌ Error generating post: {e}")
-            continue
-        
-        # Show the generated post
-        print("\n" + "="*60)
-        print("GENERATED POST:")
-        print("="*60)
-        print(post)
-        print("="*60)
-        print(f"\nCharacter count: {len(post)}")
-        
-        # AI content review
-        print("\n🔍 Running safety check...")
-        try:
-            is_safe, issues = review_post(post)
-        except Exception as e:
-            print(f"\n❌ Error during safety check: {e}")
-            # Treat as unable to verify safety
-            is_safe = False
-            issues = ["Unable to verify safety due to an internal error."]
-        
-        if not is_safe:
-            print("\n⚠️  SAFETY CONCERNS DETECTED:")
-            for issue in issues:
-                print(f"  - {issue}")
-            print("\nThis post may need revision.")
-        else:
-            print("✅ Safety check passed")
-        
-        # Get user approval
-        print("\n" + "-"*60)
-        print("Do you approve this post?")
-        print("1. Approve and save")
-        print("2. Reject (discard)")
-        print("3. Generate a new version")
-        
+        # Loop to allow regenerating new versions with same topic and style
         while True:
-            decision = input("\nEnter 1-3: ").strip()
+            print("\n🤖 Generating post...")
             
-            if decision == "1":
-                # Approve and save
-                save_approved_post(post, topic)
-                print("\n✅ Post approved and saved to approved_posts.txt")
+            # Generate the post
+            try:
+                post = generate_social_post(topic, style)
+            except Exception as e:
+                print(f"\n❌ Error generating post: {e}")
                 break
-            elif decision == "2":
-                # Reject
-                print("\n🗑️  Post rejected and discarded")
-                break
-            elif decision == "3":
-                # Generate new version
-                print("\n🤖 Generating new version...")
-                break
+            
+            # Show the generated post
+            print("\n" + "="*60)
+            print("GENERATED POST:")
+            print("="*60)
+            print(post)
+            print("="*60)
+            print(f"\nCharacter count: {len(post)}")
+            
+            # AI content review
+            print("\n🔍 Running safety check...")
+            is_safe, issues = review_post(post)
+            
+            if not is_safe:
+                print("\n⚠️  SAFETY CONCERNS DETECTED:")
+                for issue in issues:
+                    print(f"  - {issue}")
+                print("\nThis post may need revision.")
             else:
-                print("Invalid choice. Please enter 1-3.")
-        
-        if decision == "3":
-            continue  # Go back and regenerate with same topic
+                print("✅ Safety check passed")
+            
+            # Get user approval
+            print("\n" + "-"*60)
+            print("Do you approve this post?")
+            print("1. Approve and save")
+            print("2. Reject (discard)")
+            print("3. Generate a new version")
+            
+            while True:
+                decision = input("\nEnter 1-3: ").strip()
+                
+                if decision == "1":
+                    # Approve and save
+                    save_approved_post(post, topic)
+                    print("\n✅ Post approved and saved to approved_posts.txt")
+                    break
+                elif decision == "2":
+                    # Reject
+                    print("\n🗑️  Post rejected and discarded")
+                    break
+                elif decision == "3":
+                    # Generate new version
+                    print("\n🤖 Generating new version...")
+                    break
+                else:
+                    print("Invalid choice. Please enter 1-3.")
+            
+            # If user chose to generate a new version, repeat inner loop
+            if decision == "3":
+                continue
+            
+            # For approve or reject, go back to outer loop for a new topic
+            break
 
 
 if __name__ == "__main__":
